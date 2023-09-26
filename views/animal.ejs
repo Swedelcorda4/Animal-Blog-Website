@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Title</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .blog-content {
+            margin-top: 20px;
+            line-height: 1.6;
+        }
+
+        .blog-image {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><%= specific.title %></h1>
+        <p>Author: <%= specific.author %> | Date: <%= specific.date %></p>
+    </header>
+
+    <div class="container">
+        <div class="blog-content">
+            <h2>Introduction</h2>
+            <p>
+                <%= specific.introduction %>
+            </p>
+
+            <h2>Main Content</h2>
+            <p>
+                <%= specific.detailed %>
+            </p>
+            <center>
+            <img class="blog-image" src="<%= specific.imageSrc %>" alt="Image description">
+        </center>
+            
+
+            <h2>Conclusion</h2>
+            <p>
+                <%= specific.conclusion %>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
